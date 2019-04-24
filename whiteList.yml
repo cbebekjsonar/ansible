@@ -1,0 +1,5 @@
+---
+- name: add customer IP to web proxy security group
+  hosts: localhost
+  roles:
+  - modify_security_group

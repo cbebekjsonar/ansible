@@ -1,0 +1,18 @@
+---
+# vars file for mod_firewall
+
+whiteList:
+  - _id: "test-customer-XYZ"
+    whitelist_cidrs: ["23.33.84.10/32", "14.22.33.55/32", "55.33.22.11/32"]
+#  - customerName: "ABC Inc."
+#    whitelist_cidrs:   "28.114.26.103/32"
+#  - customerName: "XYX Inc."
+#    whitelist_cidrs:   "111.143.229.89/32"
+#  - customerName: "123 Inc."
+#    whitelist_cidrs:   "13.11.11.119/32"
+#  - customerName: "AB5 Inc."
+#    whitelist_cidrs:   "25.114.26.103/32"
+#  - customerName: "XY5 Inc."
+#    whitelist_cidrs:   "75.143.229.89/32"
+#  - customerName: "125 Inc."
+#    whitelist_cidrs:   "15.11.11.119/32"

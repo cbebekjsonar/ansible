@@ -1,0 +1,36 @@
+---
+# tasks file for mod_firewall
+
+- name: Set rules for web proxy security group
+  ec2_group:
+    name: web_proxy_rules
+    description: Whitelisted Customer IPs
+    vpc_id: vpc-0c671ee0923501ef8 # web proxy VPC
+    region: ca-central-1 # web proxy region
+    purge_rules: false   # true by default!!!
+    rules:
+
+    #  - proto: tcp
+    #    from_port: 22
+    #    to_port: 22
+    #    cidr_ip: "10.10.10.0/24" # ssh from private subnet only
+    #    rule_desc: private subnet
+
+      - proto: tcp
+        from_port: 443
+        to_port: 443
+        cidr_ip: "{{ item.whitelist_cidrs }}"
+        rule_desc: "{{ item._id }}"
+
+      - proto: tcp
+        from_port: 80
+        to_port: 80
+        cidr_ip: "{{ item.whitelist_cidrs }}"
+        rule_desc: "{{ item._id }}"
+
+  with_items: "{{ whiteList }}"
+#      register: output
+
+#    - debug:
+#        var: output
+
