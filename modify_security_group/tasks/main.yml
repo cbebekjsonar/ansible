@@ -1,13 +1,14 @@
 ---
-# tasks file for mod_firewall
+# tasks file for mod_security_group
 
 - name: Set rules for web proxy security group
   ec2_group:
-    name: web_proxy_rules
-    description: Whitelisted Customer IPs
-    vpc_id: vpc-0c671ee0923501ef8 # web proxy VPC
-    region: ca-central-1 # web proxy region
-    purge_rules: false   # true by default!!!
+    name:         "{{ name }}"
+    description:  "{{ description }}" # required if group is already present
+    region:       "{{ region }}"   # ca-central-1 - web proxy region
+    vpc_id:       "{{ vpc_id }}"   # vpc-0c671ee0923501ef8 - web proxy VPC
+    #group_id:    "{{ group_id }}" # or name but not both (name required if group already present)
+    purge_rules:  false            # true by default!!!
     rules:
 
     #  - proto: tcp

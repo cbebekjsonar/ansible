@@ -1,9 +1,17 @@
 ---
-# vars file for mod_firewall
+# vars file for mod_security_group
+
+region:       "ca-central-1"
+vpc_id:       "vpc-0c671ee0923501ef8"
+group_id:     "sg-08ae12380c0905c0e"
+name:         "web_proxy_rules"
+description:  "Whitelisted Customer IPs"
 
 whiteList:
-  - _id: "test-customer-XYZ"
-    whitelist_cidrs: ["23.33.84.10/32", "14.22.33.55/32", "55.33.22.11/32"]
+  - _id: "test-customer-40"
+    whitelist_cidrs: ["3.43.44.100/32", "14.22.33.55/32", "55.3.22.11/32"]
+
+
 #  - customerName: "ABC Inc."
 #    whitelist_cidrs:   "28.114.26.103/32"
 #  - customerName: "XYX Inc."
