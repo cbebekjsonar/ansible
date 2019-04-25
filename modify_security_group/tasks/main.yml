@@ -11,12 +11,6 @@
     purge_rules:  false            # true by default!!!
     rules:
 
-    #  - proto: tcp
-    #    from_port: 22
-    #    to_port: 22
-    #    cidr_ip: "10.10.10.0/24" # ssh from private subnet only
-    #    rule_desc: private subnet
-
       - proto: tcp
         from_port: 443
         to_port: 443
@@ -30,8 +24,9 @@
         rule_desc: "{{ item._id }}"
 
   with_items: "{{ whiteList }}"
-#      register: output
 
-#    - debug:
-#        var: output
+# register: output
+
+# - debug:
+#     var: output
 
