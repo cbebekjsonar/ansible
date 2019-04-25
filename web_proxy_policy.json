@@ -10,7 +10,7 @@
                 "ec2:RevokeSecurityGroupEgress",
                 "ec2:DeleteSecurityGroup"
             ],
-            "Resource": "arn:aws:ec2:ca-central-1:891511180782:security-group/sg-08ae12380c0905c0e"
+            "Resource": "arn:aws:ec2:REGION:ACCOUNTNUMBER:security-group/sg-IDNUMBER"
         },
         {
             "Effect": "Allow",
