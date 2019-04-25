@@ -1,5 +1,6 @@
 ---
 - name: add customer IP to web proxy security group
   hosts: localhost
+  #hosts: saas_master
   roles:
-  - modify_security_group
+  - web-proxy-nginx-modify-security-group

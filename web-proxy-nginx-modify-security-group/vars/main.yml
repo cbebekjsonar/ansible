@@ -8,9 +8,9 @@ name:         "web_proxy_rules"
 description:  "Whitelisted Customer IPs"
 
 whiteList:
-  - _id: "test-customer-9"
-    whitelist_cidrs: ["3.3.44.100/32", "14.2.33.55/32", "55.3.22.1/32"]
-
+  - _id: "test-customer-60"
+    whitelist_cidrs: ["63.3.44.110/32", "14.26.33.55/32", "54.36.22.1/32"]
+    #whitelist_cidrs: "{{ instance_options.whitelist_cidrs }}"
 
 #  - customerName: "ABC Inc."
 #    whitelist_cidrs:   "28.114.26.103/32"
